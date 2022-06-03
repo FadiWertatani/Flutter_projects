@@ -1,13 +1,13 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:re_learn/shared/components/components.dart';
 
-import 'BMI_Screen.dart';
-import 'BMI_Screen_Result.dart';
-import 'Counter.dart';
-import 'Home_Screen2.dart';
-import 'Login_Screen.dart';
-import 'Messanger_Screen.dart';
-import 'User_Screen.dart';
+import 'modules/BMI/BMI_Screen.dart';
+import 'modules/counter/Counter.dart';
+import 'modules/Photo/Home_Screen2.dart';
+import 'modules/auth/Login_Screen.dart';
+import 'modules/messanger/Messanger_Screen.dart';
+import 'modules/users/User_Screen.dart';
 
 class HomeScreen extends StatelessWidget {
   @override
@@ -25,124 +25,53 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.all(20.0),
           child: Column(
             children: [
-              Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    color: Colors.tealAccent,
-                    child: Text(
-                      'Photo Screen',
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Homescreen(),
-                        ),
-                      );
-                    },
-                  )),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    color: Colors.tealAccent,
-                    child: Text(
-                      'Login Screen',
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => LoginScreen(),
-                        ),
-                      );
-                    },
-                  )),
-              SizedBox(
-                height: 20.0,
-              ),
-              Container(
-                width: double.infinity,
-                height: 40.0,
-                child: MaterialButton(
-                  color: Colors.tealAccent,
-                  child: Text(
-                    'Messanger design',
-                  ),
-                  onPressed: () {
-                    Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => MessangerScreen(),
-                      ),
-                    );
-                  },
-                ),
+              defaultHomeScreenButton(
+                text: 'PhotoScreen',
+                go: Homescreen(),
+                context: context,
+                radius: 20.0,
               ),
               SizedBox(
                 height: 20.0,
               ),
-              Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    color: Colors.tealAccent,
-                    child: Text(
-                      'User Screen',
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => UserScreen(),
-                        ),
-                      );
-                    },
-                  )),
+              defaultHomeScreenButton(
+                go: LoginScreen(),
+                context: context,
+                text: 'Login Screen',
+                radius: 20.0,
+              ),
               SizedBox(
                 height: 20.0,
               ),
-              Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    color: Colors.tealAccent,
-                    child: Text(
-                      'Counter',
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => Counter(),
-                        ),
-                      );
-                    },
-                  )),
+              defaultHomeScreenButton(
+                text: 'Messanger Design',
+                go: MessangerScreen(),
+                context: context,
+              ),
               SizedBox(
                 height: 20.0,
               ),
-              Container(
-                  width: double.infinity,
-                  height: 40.0,
-                  child: MaterialButton(
-                    color: Colors.tealAccent,
-                    child: Text(
-                      'BMI Calculator',
-                    ),
-                    onPressed: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => BMIScreen(),
-                        ),
-                      );
-                    },
-                  )),
+              defaultHomeScreenButton(
+                text: 'User Screen',
+                context: context,
+                go: UserScreen(),
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              defaultHomeScreenButton(
+                text: 'Counter',
+                go: Counter(),
+                context: context,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              defaultHomeScreenButton(
+                text: 'BMI Calculator',
+                go: BMIScreen(),
+                context: context,
+              ),
             ],
           ),
         ));
