@@ -32,81 +32,85 @@ class Homescreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topStart: Radius.circular(20.0),
-                        bottomEnd: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20.0),
+                          bottomEnd: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/me.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_1',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/me.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_1',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 40.0,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topEnd: Radius.circular(20.0),
-                        bottomStart: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topEnd: Radius.circular(20.0),
+                          bottomStart: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/Fadi.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_2',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/Fadi.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_2',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -117,81 +121,85 @@ class Homescreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topStart: Radius.circular(20.0),
-                        bottomEnd: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20.0),
+                          bottomEnd: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/Fadi.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_1',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/Fadi.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_2',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 40.0,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topEnd: Radius.circular(20.0),
-                        bottomStart: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topEnd: Radius.circular(20.0),
+                          bottomStart: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/me.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_2',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/me.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_1',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -202,81 +210,85 @@ class Homescreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topStart: Radius.circular(20.0),
-                        bottomEnd: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20.0),
+                          bottomEnd: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/me.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_1',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/me.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_1',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 40.0,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topEnd: Radius.circular(20.0),
-                        bottomStart: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topEnd: Radius.circular(20.0),
+                          bottomStart: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/Fadi.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_2',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/Fadi.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_2',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
@@ -287,87 +299,177 @@ class Homescreen extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topStart: Radius.circular(20.0),
-                        bottomEnd: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20.0),
+                          bottomEnd: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/Fadi.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_1',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/Fadi.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_2',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                   SizedBox(
                     width: 40.0,
                   ),
-                  Container(
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadiusDirectional.only(
-                        topEnd: Radius.circular(20.0),
-                        bottomStart: Radius.circular(20.0),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topEnd: Radius.circular(20.0),
+                          bottomStart: Radius.circular(20.0),
+                        ),
                       ),
-                    ),
-                    clipBehavior: Clip.antiAliasWithSaveLayer,
-                    width: 200.0,
-                    child: Stack(
-                      alignment: Alignment.bottomCenter,
-                      children: [
-                        Image(
-                          height: 200.0,
-                          width: 200.0,
-                          image: AssetImage(
-                            'assets/me.jpg',
-                          ),
-                        ),
-                        Container(
-                          padding: EdgeInsets.symmetric(
-                            vertical: 10.0,
-                          ),
-                          width: double.infinity,
-                          color: Colors.teal.withOpacity(.7),
-                          child: Text(
-                            'Fadi_2',
-                            style: TextStyle(
-                              fontSize: 20.0,
-                              color: Colors.white,
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/me.jpg',
                             ),
-                            textAlign: TextAlign.center,
                           ),
-                        ),
-                      ],
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_1',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 ],
               ),
               SizedBox(
                 height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topStart: Radius.circular(20.0),
+                          bottomEnd: Radius.circular(20.0),
+                        ),
+                      ),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/me.jpg',
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_1',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 40.0,
+                  ),
+                  Expanded(
+                    child: Container(
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadiusDirectional.only(
+                          topEnd: Radius.circular(20.0),
+                          bottomStart: Radius.circular(20.0),
+                        ),
+                      ),
+                      clipBehavior: Clip.antiAliasWithSaveLayer,
+                      width: 150.0,
+                      child: Stack(
+                        alignment: Alignment.bottomCenter,
+                        children: [
+                          Image(
+                            height: 150.0,
+                            width: 150.0,
+                            image: AssetImage(
+                              'assets/Fadi.jpg',
+                            ),
+                          ),
+                          Container(
+                            padding: EdgeInsets.symmetric(
+                              vertical: 10.0,
+                            ),
+                            width: double.infinity,
+                            color: Colors.teal.withOpacity(.7),
+                            child: Text(
+                              'Fadi_2',
+                              style: TextStyle(
+                                fontSize: 20.0,
+                                color: Colors.white,
+                              ),
+                              textAlign: TextAlign.center,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:re_learn/shared/components/components.dart';
 
+import 'modules/Todo/home_layout.dart';
 import 'modules/BMI/BMI_Screen.dart';
 import 'modules/counter/Counter.dart';
 import 'modules/Photo/Home_Screen2.dart';
@@ -70,6 +71,14 @@ class HomeScreen extends StatelessWidget {
               defaultHomeScreenButton(
                 text: 'BMI Calculator',
                 go: BMIScreen(),
+                context: context,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              defaultHomeScreenButton(
+                text: 'Todo App',
+                go: HomeLayout(),
                 context: context,
               ),
             ],
