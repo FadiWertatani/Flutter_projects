@@ -1,24 +1,19 @@
 import 'package:flutter/material.dart';
-
-import 'layout/home_layout.dart';
-import 'modules/counter/Counter.dart';
-import 'modules/counter/Counter_Screen.dart';
-import 'Home_Screen.dart';
-import 'modules/Photo/Home_Screen2.dart';
-import 'modules/auth/Login_Screen.dart';
-import 'modules/users/User_Screen.dart';
-import 'modules/users/Users_Screen.dart';
+import 'package:re_learn/Home_Screen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
+  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp( 
+    return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: HomeLayout(),
+      home: HomeScreen(),
     );
   }
 }
