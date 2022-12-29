@@ -92,3 +92,42 @@ Widget defaultFormField({
             : null,
       ),
     );
+
+//TodoItem
+Widget buildTaskItem(Map model) => Padding(
+  padding: const EdgeInsets.all(12.0),
+  child: Row(
+    children: [
+      CircleAvatar(
+        radius: 32.0,
+        child: Center(
+          child: Text(
+            '${model['time']}',
+          ),
+        ),
+      ),
+      SizedBox(
+          width: 20.0
+      ),
+      Column(
+        mainAxisSize: MainAxisSize.min,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            '${model['title']}',
+            style: TextStyle(
+              fontSize: 16.0,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            '${model['date']}',
+            style: TextStyle(
+              color: Colors.grey,
+            ),
+          ),
+        ],
+      ),
+    ],
+  ),
+);

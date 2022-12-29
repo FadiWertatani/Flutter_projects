@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "960399269351",
+    "project_id": "re-learn-742cc",
+    "storage_bucket": "re-learn-742cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960399269351:android:6c28f685f0d370385b7142",
+        "android_client_info": {
+          "package_name": "com.example.re_learn"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960399269351-7g3socecej3084vdeui77r0bl7uj39mo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDwCUkoScrfNryQf2HyTQt4KdfieWZa_aE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960399269351-7g3socecej3084vdeui77r0bl7uj39mo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

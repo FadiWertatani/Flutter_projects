@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:re_learn/modules/counterWithBloc/counter.dart';
 import 'package:re_learn/shared/components/components.dart';
 
 import 'modules/Todo/home_layout.dart';
@@ -63,6 +64,14 @@ class HomeScreen extends StatelessWidget {
               defaultHomeScreenButton(
                 text: 'Counter',
                 go: Counter(),
+                context: context,
+              ),
+              SizedBox(
+                height: 20.0,
+              ),
+              defaultHomeScreenButton(
+                text: 'Counter with bloc',
+                go: CounterM(),
                 context: context,
               ),
               SizedBox(
