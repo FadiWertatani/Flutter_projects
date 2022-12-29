@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:re_learn/modules/Todo/shared/cubit/cubit.dart';
 
 //Login Button component
 Widget defaultButton({
@@ -94,12 +95,12 @@ Widget defaultFormField({
     );
 
 //TodoItem
-Widget buildTaskItem(Map model) => Padding(
+Widget buildTaskItem(Map model, context) => Padding(
   padding: const EdgeInsets.all(12.0),
   child: Row(
     children: [
       CircleAvatar(
-        radius: 32.0,
+        radius: 38.0,
         child: Center(
           child: Text(
             '${model['time']}',
@@ -109,25 +110,42 @@ Widget buildTaskItem(Map model) => Padding(
       SizedBox(
           width: 20.0
       ),
-      Column(
-        mainAxisSize: MainAxisSize.min,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          Text(
-            '${model['title']}',
-            style: TextStyle(
-              fontSize: 16.0,
-              fontWeight: FontWeight.bold,
+      Expanded(
+        child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(
+              '${model['title']}',
+              style: TextStyle(
+                fontSize: 16.0,
+                fontWeight: FontWeight.bold,
+              ),
             ),
-          ),
-          Text(
-            '${model['date']}',
-            style: TextStyle(
-              color: Colors.grey,
+            Text(
+              '${model['date']}',
+              style: TextStyle(
+                color: Colors.grey,
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
+      SizedBox(
+          width: 20.0
+      ),
+      IconButton(
+        onPressed: (){
+          AppCubit.get(context).updateData(status: 'done', id: model['id']);
+        },
+        icon: Icon(Icons.check_box,color: Colors.green,),
+      ),
+      IconButton(
+        onPressed: (){
+          AppCubit.get(context).updateData(status: 'archive', id: model['id']);
+        },
+        icon: Icon(Icons.archive,color: Colors.blueGrey,),
+      )
     ],
   ),
 );

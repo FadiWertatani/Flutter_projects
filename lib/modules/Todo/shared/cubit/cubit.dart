@@ -7,7 +7,6 @@ import 'package:re_learn/modules/Todo/new_tasks/New_Tasks_Screen.dart';
 import 'package:re_learn/modules/Todo/shared/cubit/states.dart';
 import 'package:sqflite/sqflite.dart';
 
-import '../../../../shared/components/constants.dart';
 
 class AppCubit extends Cubit<AppStates> {
   AppCubit() : super(AppInitialStates());
@@ -16,7 +15,9 @@ class AppCubit extends Cubit<AppStates> {
 
   int currentIndex = 0;
   //task list for todoApp
-  List<Map> tasks = [];
+  List<Map> newTasks = [];
+  List<Map> doneTasks = [];
+  List<Map> archiveTasks = [];
 
   List<Widget> screens = [
     NewTasksScreen(),
@@ -47,12 +48,7 @@ class AppCubit extends Cubit<AppStates> {
         );
       },
       onOpen: (database) {
-        getData(database).then((value) {
-          tasks = value;
-          print(tasks);
-          emit(AppGetDatabaseState());
-          }
-        );
+        getData(database);
 
         print('Database opened');
       },
@@ -69,24 +65,50 @@ class AppCubit extends Cubit<AppStates> {
   }) async {
     await database.transaction((txn) async {
       await txn.rawInsert(
-          'INSERT INTO tasks (title, date, time, status) VALUES("${title}", "${date}", "${time}", "")')
+          'INSERT INTO tasks (title, date, time, status) VALUES("${title}", "${date}", "${time}", "new")')
           .then((value) {
         print("$value inserted successfully");
         emit(AppInsertDatabaseState());
 
-        getData(database).then((value) {
-          tasks = value;
-          print(tasks);
-          emit(AppGetDatabaseState());
-          }
-        );
+        getData(database);
       }).
       catchError((error){print(error);});
     });
   }
 
-  Future<List<Map>> getData(database) async {
-    return await database.rawQuery('SELECT * FROM tasks');
+  void getData(database) async {
+
+    newTasks = [];
+    doneTasks = [];
+    archiveTasks = [];
+
+    emit(AppGetDatabaseLoadingState());
+    
+    database.rawQuery('SELECT * FROM tasks').then((value) {
+
+      value.forEach((element) {
+        if(element['status'] == 'new') newTasks.add(element);
+        else if (element['status'] == 'done') doneTasks.add(element);
+        else archiveTasks.add(element);
+      });
+
+
+      emit(AppGetDatabaseState());
+    }
+    );
+  }
+
+  void updateData({
+  required String status,
+  required int id,
+}) async {
+    database.rawUpdate(
+        'UPDATE tasks SET status = ? WHERE id = ?',
+        ['$status', id]).then((value) {
+          getData(database);
+          emit(AppUpdateDatabaseState());
+    });
+    // print('updated: $count');
   }
 
   bool isBottomSheetShown = false;

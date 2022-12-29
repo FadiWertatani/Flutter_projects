@@ -46,7 +46,7 @@ class HomeLayout extends StatelessWidget {
               ),
             ),
             body: ConditionalBuilder(
-              condition: true,
+              condition: state is! AppGetDatabaseLoadingState,
               builder: (context) => cubit.screens[cubit.currentIndex],
               fallback: (context) => Center(child: CircularProgressIndicator(),
               ),
