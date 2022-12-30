@@ -111,6 +111,17 @@ class AppCubit extends Cubit<AppStates> {
     // print('updated: $count');
   }
 
+  void deleteData({
+    required int id,
+  }) async {
+    database.rawDelete('DELETE FROM tasks WHERE id = ?', [id])
+        .then((value) {
+      getData(database);
+      emit(AppDeleteDatabaseState());
+    });
+    // print('updated: $count');
+  }
+
   bool isBottomSheetShown = false;
   IconData fabIcon = Icons.edit_outlined;
 

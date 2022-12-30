@@ -13,20 +13,7 @@ class ArchivedTasksScreen extends StatelessWidget {
       listener: (context, state){},
       builder: (context, state){
         var tasks = AppCubit.get(context).archiveTasks;
-        return ListView.separated(
-          itemBuilder: (context, index){
-            return buildTaskItem(tasks[index], context);
-          },
-          separatorBuilder: (context, index) => Padding(
-            padding: const EdgeInsetsDirectional.only(start: 20.0),
-            child: Container(
-              width: double.infinity,
-              height: 1.0,
-              color: Colors.grey[300],
-            ),
-          ),
-          itemCount: tasks.length,
-        );
+        return taskBuilder(tasks: tasks);
       },
     );
   }
